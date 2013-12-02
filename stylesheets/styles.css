@@ -1,8 +1,10 @@
-@import url(https://fonts.googleapis.com/css?family=Lato:300italic,700italic,300,700);
+/*@import url(https://fonts.googleapis.com/css?family=Lato:300italic,700italic,300,700);*/
+/*@import url(http://fonts.googleapis.com/css?family=PT+Sans);*/
+@import url(http://fonts.googleapis.com/css?family=Raleway);
 
 body {
   padding:50px;
-  font:14px/1.5 Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font:14px/1.5 Raleway, sans-serif;
   color:#777;
   font-weight:300;
 }
@@ -21,7 +23,9 @@ h1, h2, h3 {
 }
 
 h1 {
-  font-size:28px;
+  font-size:64px;
+  color:#6EDD88;
+  font-weight: 200;
 }
 
 h2 {
@@ -96,7 +100,7 @@ img {
 }
 
 header {
-  width:270px;
+  /*width:270px;*/
   float:left;
   position:fixed;
 }
