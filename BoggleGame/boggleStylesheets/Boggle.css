@@ -1,0 +1,75 @@
+div.cube{
+/*	max-width: 160px;
+	min-width: 20px;
+	max-height: 160px;
+	min-height: 20px;*/
+	text-align: center;
+/*	min-width: 60px;
+	min-height: 50px;*/
+	line-height: 150px;
+/*	border-style: solid;
+	border-color: red;*/
+	background-color: orange;
+	/*margin: none;*/
+	display: inline-block;
+}
+
+div.text{
+	margin-left: auto;
+    margin-right: auto;
+    vertical-align: middle;
+
+}
+
+.wordListArea{
+	vertical-align: middle;
+	text-align:left;
+	table-layout: fixed; 
+	background-color: orange;
+	margin-left: 30%;
+	margin-right: 30%;
+  	position: relative;
+  	top: 0; left: 0; bottom: 0; right: 0;
+	/*border-color: orange;*/
+}
+
+h3{
+	text-align: center;
+}
+
+table{
+	display: inline-block;
+}
+
+.container-popup {
+    position: fixed;
+    z-index:1001;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0,0,0,.8);
+    visibility:hidden;
+}
+
+.score-popup {
+    width: 50%;
+    height: 50%;
+    background: #1abcb9;
+    position: fixed;
+    z-index:1002;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    visibility:hidden;
+}
+
+/*
+.centered{
+	text-align: center;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}*/

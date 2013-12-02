@@ -1,0 +1,8 @@
+div.cube{
+	width: 160px;
+	height: 160px;
+	border-style: solid;
+	border-color: red;
+	position: absolute;
+	float: left;
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+    	<meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    	<title>christihagen.com</title>
+    
+    	<link rel="shortcut icon" href="http://christihagen.com/favicon.ico" rel="icon" type="image/x-icon" />
+    	<link rel="stylesheet" href="http://christihagen.com/BoggleStylesheets/Boggle.css">
+    	<link rel="stylesheet" href="http://christihagen.com/BoggleStylesheets/responsive.css">
+    	
+    	<script src="Boggle.js"></script>
+
+    <head>
+    <body>
+    	<script src="http://christihagen.com/javascripts/jquery.js"></script>
+    	
+    	<div id="wrapper">
+    		<div id="headcontainer">
+    			<header>
+					<h1>Boggle!</h1>
+					<p></p>
+       				<button onclick="shuffleBoggleGrid()" style="display: inline-block">Shake Cubes!</button>
+    				<span id="countdownTimer">Time Left:</span>
+       				<p></p>
+				</header>
+			</div>
+			<div id="maincontentcontainer">
+				<div id="maincontent">
+			   		<div class="section group" >
+			   			<div class="col span_1_of_4 text">
+			   				<h3> Word List </h3>
+			   				<table id="wordList" class="wordListArea" border="0"></table>
+			   			</div>
+			   			
+				   		<div class="col span_3_of_4">
+				   			<div id="score_overlay" class="container-popup">
+    							<div id="score_screen" class="score-popup">
+    								<h2>Game Stats</h2>
+    								<h4>Score:</h4> 
+    							</div>
+							</div>
+				   			<div id="boggleGrid" onmouseleave="clearBoard()" class="section group">
+					   		 	<div id="cube1" class="cube col cubespan_1_of_4 fourth" onmousedown="buildWord(event)" onmousemove="buildingWord(event)" onmouseup="submitWord(event)"></div>
+					   		 	<div id="cube2" class="cube col cubespan_1_of_4" onmousedown="buildWord(event)" onmousemove="buildingWord(event)" onmouseup="submitWord(event)"></div>
+					   		 	<div id="cube3" class="cube col cubespan_1_of_4" onmousedown="buildWord(event)" onmousemove="buildingWord(event)" onmouseup="submitWord(event)"></div>
+					   		 	<div id="cube4" class="cube col cubespan_1_of_4" onmousedown="buildWord(event)" onmousemove="buildingWord(event)" onmouseup="submitWord(event)"></div>
+					   		 	
+					   		 	<div id="cube5" class="cube col cubespan_1_of_4 fourth" onmousedown="buildWord(event)" onmousemove="buildingWord(event)" onmouseup="submitWord(event)"></div>
+					   		 	<div id="cube6" class="cube col cubespan_1_of_4" onmousedown="buildWord(event)" onmousemove="buildingWord(event)" onmouseup="submitWord(event)"></div>
+					   		 	<div id="cube7" class="cube col cubespan_1_of_4" onmousedown="buildWord(event)" onmousemove="buildingWord(event)" onmouseup="submitWord(event)"></div>
+					   		 	<div id="cube8" class="cube col cubespan_1_of_4" onmousedown="buildWord(event)" onmousemove="buildingWord(event)" onmouseup="submitWord(event)"></div>
+					   		 	
+					   		 	<div id="cube9" class="cube col cubespan_1_of_4 fourth" onmousedown="buildWord(event)" onmousemove="buildingWord(event)" onmouseup="submitWord(event)"></div>
+					   		 	<div id="cube10" class="cube col cubespan_1_of_4" onmousedown="buildWord(event)" onmousemove="buildingWord(event)" onmouseup="submitWord(event)"></div>
+					   		 	<div id="cube11" class="cube col cubespan_1_of_4" onmousedown="buildWord(event)" onmousemove="buildingWord(event)" onmouseup="submitWord(event)"></div>
+					   		 	<div id="cube12" class="cube col cubespan_1_of_4" onmousedown="buildWord(event)" onmousemove="buildingWord(event)" onmouseup="submitWord(event)"></div>
+					   		 	
+					   		 	<div id="cube13" class="cube col cubespan_1_of_4 fourth" onmousedown="buildWord(event)" onmousemove="buildingWord(event)" onmouseup="submitWord(event)"></div>
+					   		 	<div id="cube14" class="cube col cubespan_1_of_4" onmousedown="buildWord(event)"onmousemove="buildingWord(event)" onmouseup="submitWord(event)"></div>
+					   		 	<div id="cube15" class="cube col cubespan_1_of_4" onmousedown="buildWord(event)" onmousemove="buildingWord(event)" onmouseup="submitWord(event)"></div>
+					   		 	<div id="cube16" class="cube col cubespan_1_of_4" onmousedown="buildWord(event)" onmousemove="buildingWord(event)" onmouseup="submitWord(event)"></div>
+					   		</div>
+				   		</div>
+			   		</div>
+			  	</div>
+			</div>
+		</div>
+
+    </body>
