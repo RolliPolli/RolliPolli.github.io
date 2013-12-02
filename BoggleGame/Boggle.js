@@ -206,6 +206,6 @@ window.onload = function(){
 	// var request = new XMLHttpRequest();
 	// request.open('GET', 'boggleDictionary.txt', false);
 	// request.send();
-	$.get('boggleDictionary.txt', function(data) {dictionaryWords = data;});
+	$.get('http://christihagen.com/BoggleGame/boggleDictionary.txt', function(data) {dictionaryWords = data;});
 	window.alert(dictionaryWords);
 }
