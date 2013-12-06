@@ -279,24 +279,22 @@ function getScores(wl, index){
 			wl.rows[index].style.color = "rgb(255, 0, 0)"; // turn it red because 
 			wl.rows[index].cells[1].innerHTML = "X"; //it isn't a word in dictionary
 			return;
-
 		}
 	}
 }
 
-<<<<<<< HEAD
 // pause game appropriately
 function pause(){
 	if (is_pause == false){
 		if (min < resetmin){
 			window.clearTimeout(countdownTime);
 			is_pause = true;
-				if (sec<=9) { 
-					document.getElementById("time").innerHTML = "\n" + min + ":0" + sec;
-				}
-				else{
-					document.getElementById("time").innerHTML  = "\n" + min + ":" + sec;
-				}
+			if (sec<=9) { 
+				document.getElementById("time").innerHTML = "\n" + min + ":0" + sec;
+			}
+			else{
+				document.getElementById("time").innerHTML  = "\n" + min + ":" + sec;
+			}
 			document.getElementById("score_overlay").style.visibility = "visible";
 			document.getElementById("pause_screen").style.visibility = "visible";
 			return;
@@ -308,13 +306,4 @@ function pause(){
 		is_pause = false;
 		countdownTime = window.setTimeout("countdownTimer();", 1000);
 	}	
-=======
-
-window.onload = function(){
-	// var request = new XMLHttpRequest();
-	// request.open('GET', 'boggleDictionary.txt', false);
-	// request.send();
-	$.get('http://christihagen.com/BoggleGame/boggleDictionary.txt', function(data) {dictionaryWords = data;});
-	window.alert(dictionaryWords);
->>>>>>> 08620d0d9d2f1d1943fd91ed1b13fe2bf724ebd2
 }
