@@ -284,6 +284,7 @@ function getScores(wl, index){
 	}
 }
 
+<<<<<<< HEAD
 // pause game appropriately
 function pause(){
 	if (is_pause == false){
@@ -307,4 +308,13 @@ function pause(){
 		is_pause = false;
 		countdownTime = window.setTimeout("countdownTimer();", 1000);
 	}	
+=======
+
+window.onload = function(){
+	// var request = new XMLHttpRequest();
+	// request.open('GET', 'boggleDictionary.txt', false);
+	// request.send();
+	$.get('http://christihagen.com/BoggleGame/boggleDictionary.txt', function(data) {dictionaryWords = data;});
+	window.alert(dictionaryWords);
+>>>>>>> 08620d0d9d2f1d1943fd91ed1b13fe2bf724ebd2
 }
