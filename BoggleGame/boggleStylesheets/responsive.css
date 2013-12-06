@@ -1,18 +1,22 @@
+/* code based on responsive grid system at responsivegridsystem.com */
+
 /* BASIC PAGE SETUP ============================================================================= */
+@font-face {
+	font-family: 'Fredoka One', cursive;
+}
 
 body { 
 margin : 0 auto;
 padding : 0;
-font : 100%/1.4 'lucida sans unicode', 'lucida grande', 'Trebuchet MS', verdana, arial, helvetica, helve, sans-serif; 	
-color : #000; 
+font : 100%/1.4 'Fredoka One','lucida sans unicode', 'lucida grande', 'Trebuchet MS', verdana, arial, helvetica, sans-serif; 	
+color : #00CEFF; 
 text-align: center;
-background: #fff url(/images/bodyback.png) left top;
- -webkit-user-select: none;  
+background: rgb(255, 129, 0);
+ -webkit-user-select: none;  /*so that the screen cannot be highlighted --> makes the click and drag work!*/
   -moz-user-select: none;    
   -ms-user-select: none;      
   user-select: none;
 }
-
 
 /*  SECTIONS  ============================================================================= */
 
@@ -23,7 +27,6 @@ background: #fff url(/images/bodyback.png) left top;
 }
 
 /*  GROUPING  ============================================================================= */
-
 
 .group:before,
 .group:after {
@@ -44,11 +47,8 @@ background: #fff url(/images/bodyback.png) left top;
 	float:left;
 	margin: 1% 0 1% 1.6%;
 }
-.fourth{
-	margin-left: 0;
-}
 
-.col:first-child { /*margin-left: 0;*/ } /* all browsers except IE6 and lower */
+/*.col:first-child { margin-left: 0;/}  all browsers except IE6 and lower */
 
 
 /*  REMOVE MARGINS AS ALL GO FULL WIDTH AT 480 PIXELS */
@@ -60,7 +60,6 @@ background: #fff url(/images/bodyback.png) left top;
 }
 
 /*  GRID OF FOUR   ============================================================================= */
-
 	
 .span_4_of_4 {
 	width: 100%; 
@@ -78,26 +77,9 @@ background: #fff url(/images/bodyback.png) left top;
 	width: 23.8%; 
 }
 
-.cubespan_4_of_4 {
-	width: 100%; 
-}
-
-.cubespan_3_of_4 {
-	width: 74.6%; 
-}
-
-.cubespan_2_of_4 {
-	width: 49.2%; 
-}
-
-.cubespan_1_of_4 {
-	width: 23.8%; 
-	height: 23.8%;
-}
-
 
 /*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
-
+/*
 @media only screen and (max-width: 480px) {
 	.span_4_of_4 {
 		width: 100%; 
@@ -110,8 +92,8 @@ background: #fff url(/images/bodyback.png) left top;
 	}
 	.span_1_of_4 {
 		width: 100%; 
-	}
-}
+	}*/
+/*}*/
 
 /*  MAIN LAYOUT	============================================================================= */
 
@@ -123,50 +105,30 @@ background: #fff url(/images/bodyback.png) left top;
 
 	#headcontainer {
 		width: 100%;
-		background: no-repeat center top;
+		background:#00CEFF;
 	}
 
 		header {
 			clear: both;
 			width: 80%; /* 1000px / 1250px */
 			font-size: 0.8125em; /* 13 / 16 */
-			max-width: 92.3em; /* 1200px / 13 */
+			max-width: 62.3em; /* 1200px / 13 */
 			margin: 0 auto;
-			padding: 130px 0px 10px 0px;
+			padding: 10px 0px 10px 0px;
 			position: relative;
-			color: #000;
+			color: #fff;
 			text-align: center;
+	
 		}
 
 	#maincontentcontainer {
 		width: 100%;
+		background: rgb(255, 129, 0);
+		text-align: center;
+		vertical-align: middle;
 	}
-
-		.standardcontainer {
-			
-		}
-		
-		.darkcontainer {
-			background: rgba(102, 102, 102, 0.05);
-		}
-
-		.lightcontainer {
-			background: rgba(255, 255, 255, 0.33);
-		}
 		
 			#maincontent{
-				clear: both;
-				width: 80%; /* 1000px / 1250px */
-				font-size: 0.8125em; /* 13 / 16 */
-				max-width: 92.3em; /* 1200px / 13 */
-				margin: 0 auto;
-				padding: 1em 0px;
-				color: #333;
-				line-height: 1.5em;
-				position: relative;
-			}
-		
-			.maincontent{
 				clear: both;
 				width: 80%; /* 1000px / 1250px */
 				font-size: 0.8125em; /* 13 / 16 */

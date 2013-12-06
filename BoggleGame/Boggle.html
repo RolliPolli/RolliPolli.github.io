@@ -5,63 +5,75 @@
     	<meta http-equiv="X-UA-Compatible" content="chrome=1">
 
     	<title>christihagen.com</title>
-    
-    	<link rel="shortcut icon" href="http://christihagen.com/favicon.ico" rel="icon" type="image/x-icon" />
-    	<link rel="stylesheet" href="http://christihagen.com/BoggleStylesheets/Boggle.css">
-    	<link rel="stylesheet" href="http://christihagen.com/BoggleStylesheets/responsive.css">
-    	
-    	<script src="Boggle.js"></script>
 
+    	<link href='http://fonts.googleapis.com/css?family=Fredoka+One' rel='stylesheet' type='text/css'>
+    	<link rel="shortcut icon" href="http://christihagen.com/favicon.ico" rel="icon" type="image/x-icon" />
+    	<link rel="stylesheet" href="BoggleStylesheets/Boggle.css">
+    	<link rel="stylesheet" href="BoggleStylesheets/responsive.css">
+    	<link rel="stylesheet" href="BoggleStylesheets/animate-custom.css">
+    	<script src="Boggle.js"></script>
+    	<script src="boggleDictionary.js"></script>
     <head>
     <body>
-    	<script src="http://christihagen.com/javascripts/jquery.js"></script>
-    	
     	<div id="wrapper">
     		<div id="headcontainer">
     			<header>
-					<h1>Boggle!</h1>
-					<p></p>
-       				<button onclick="shuffleBoggleGrid()" style="display: inline-block">Shake Cubes!</button>
-    				<span id="countdownTimer">Time Left:</span>
-       				<p></p>
+					<h1 class="gamename animated bounceIn">Boggle!</h1>
 				</header>
 			</div>
 			<div id="maincontentcontainer">
 				<div id="maincontent">
 			   		<div class="section group" >
-			   			<div class="col span_1_of_4 text">
-			   				<h3> Word List </h3>
-			   				<table id="wordList" class="wordListArea" border="0"></table>
+			   			<div class="col span_1_of_4 text" style="text-align:right">
+			   			<h2 style="text-align:right" >Score: <span id="currentScore"></span></h2>
+			   				<h3 style="text-align:right" > Word List </h3>
+			   				<table id="wordList" class="wordListArea" border="0" style="text-align:right"></table>
 			   			</div>
 			   			
-				   		<div class="col span_3_of_4">
+				   		<div class="col span_2_of_4 light-orange animate shake">
 				   			<div id="score_overlay" class="container-popup">
     							<div id="score_screen" class="score-popup">
-    								<h2>Game Stats</h2>
-    								<h4>Score:</h4> 
+    								<div style="margin-top: 50px"><h1>That's Game!</h1></div>
+    								<h2>Score:  <span id="score">0</span></h2>
+    								<span class="message" id="endMessage"></span>
+    								<br><br> 
+    								<button class="centered menuBtn popupBtn" style="clear:none; float:none;"onclick="playAgain()">Play Again!</button>
+    							</div>
+    							<div id="pause_screen" class="score-popup">
+    								<div style="margin-top: 50px"><h1>Game Paused!</h1></div>
+    								<br>
+    								<h1 class="message">Time Left<span id="time"></span></h1>
+    								<br><br>
+    								<button class="centered menuBtn popupBtn" style="clear:none; float:none;"onclick="pause()">Unpause</button>
     							</div>
 							</div>
-				   			<div id="boggleGrid" onmouseleave="clearBoard()" class="section group">
-					   		 	<div id="cube1" class="cube col cubespan_1_of_4 fourth" onmousedown="buildWord(event)" onmousemove="buildingWord(event)" onmouseup="submitWord(event)"></div>
-					   		 	<div id="cube2" class="cube col cubespan_1_of_4" onmousedown="buildWord(event)" onmousemove="buildingWord(event)" onmouseup="submitWord(event)"></div>
-					   		 	<div id="cube3" class="cube col cubespan_1_of_4" onmousedown="buildWord(event)" onmousemove="buildingWord(event)" onmouseup="submitWord(event)"></div>
-					   		 	<div id="cube4" class="cube col cubespan_1_of_4" onmousedown="buildWord(event)" onmousemove="buildingWord(event)" onmouseup="submitWord(event)"></div>
-					   		 	
-					   		 	<div id="cube5" class="cube col cubespan_1_of_4 fourth" onmousedown="buildWord(event)" onmousemove="buildingWord(event)" onmouseup="submitWord(event)"></div>
-					   		 	<div id="cube6" class="cube col cubespan_1_of_4" onmousedown="buildWord(event)" onmousemove="buildingWord(event)" onmouseup="submitWord(event)"></div>
-					   		 	<div id="cube7" class="cube col cubespan_1_of_4" onmousedown="buildWord(event)" onmousemove="buildingWord(event)" onmouseup="submitWord(event)"></div>
-					   		 	<div id="cube8" class="cube col cubespan_1_of_4" onmousedown="buildWord(event)" onmousemove="buildingWord(event)" onmouseup="submitWord(event)"></div>
-					   		 	
-					   		 	<div id="cube9" class="cube col cubespan_1_of_4 fourth" onmousedown="buildWord(event)" onmousemove="buildingWord(event)" onmouseup="submitWord(event)"></div>
-					   		 	<div id="cube10" class="cube col cubespan_1_of_4" onmousedown="buildWord(event)" onmousemove="buildingWord(event)" onmouseup="submitWord(event)"></div>
-					   		 	<div id="cube11" class="cube col cubespan_1_of_4" onmousedown="buildWord(event)" onmousemove="buildingWord(event)" onmouseup="submitWord(event)"></div>
-					   		 	<div id="cube12" class="cube col cubespan_1_of_4" onmousedown="buildWord(event)" onmousemove="buildingWord(event)" onmouseup="submitWord(event)"></div>
-					   		 	
-					   		 	<div id="cube13" class="cube col cubespan_1_of_4 fourth" onmousedown="buildWord(event)" onmousemove="buildingWord(event)" onmouseup="submitWord(event)"></div>
-					   		 	<div id="cube14" class="cube col cubespan_1_of_4" onmousedown="buildWord(event)"onmousemove="buildingWord(event)" onmouseup="submitWord(event)"></div>
-					   		 	<div id="cube15" class="cube col cubespan_1_of_4" onmousedown="buildWord(event)" onmousemove="buildingWord(event)" onmouseup="submitWord(event)"></div>
-					   		 	<div id="cube16" class="cube col cubespan_1_of_4" onmousedown="buildWord(event)" onmousemove="buildingWord(event)" onmouseup="submitWord(event)"></div>
+				   			<div id="boggleGrid" onmouseleave="clearBoard()" onmouseup="submitWord(event)">
+					   		 	<div id="cube1" class="btn btnW" onmousedown="buildWord(event)" onmousemove="buildingWord(event)" onmouseup="submitWord(event)"></div>
+					   		 	<div id="cube2" class="btn btnW" onmousedown="buildWord(event)" onmousemove="buildingWord(event)" onmouseup="submitWord(event)"></div>
+					   		 	<div id="cube3" class="btn btnW" onmousedown="buildWord(event)" onmousemove="buildingWord(event)" onmouseup="submitWord(event)"></div>
+					   		 	<div id="cube4" class="btn btnW" onmousedown="buildWord(event)" onmousemove="buildingWord(event)" onmouseup="submitWord(event)"></div>
+					   		 	<br>
+					   		 	<div id="cube5" class="btn btnW" onmousedown="buildWord(event)" onmousemove="buildingWord(event)" onmouseup="submitWord(event)"></div>
+					   		 	<div id="cube6" class="btn btnW" onmousedown="buildWord(event)" onmousemove="buildingWord(event)" onmouseup="submitWord(event)"></div>
+					   		 	<div id="cube7" class="btn btnW" onmousedown="buildWord(event)" onmousemove="buildingWord(event)" onmouseup="submitWord(event)"></div>
+					   		 	<div id="cube8" class="btn btnW" onmousedown="buildWord(event)" onmousemove="buildingWord(event)" onmouseup="submitWord(event)"></div>
+					   		 	<br>
+					   		 	<div id="cube9" class="btn btnW" onmousedown="buildWord(event)" onmousemove="buildingWord(event)" onmouseup="submitWord(event)"></div>
+					   		 	<div id="cube10" class="btn btnW" onmousedown="buildWord(event)" onmousemove="buildingWord(event)" onmouseup="submitWord(event)"></div>
+					   		 	<div id="cube11" class="btn btnW" onmousedown="buildWord(event)" onmousemove="buildingWord(event)" onmouseup="submitWord(event)"></div>
+					   		 	<div id="cube12" class="btn btnW" onmousedown="buildWord(event)" onmousemove="buildingWord(event)" onmouseup="submitWord(event)"></div>
+					   		 	<br>
+					   		 	<div id="cube13" class="btn btnW" onmousedown="buildWord(event)" onmousemove="buildingWord(event)" onmouseup="submitWord(event)"></div>
+					   		 	<div id="cube14" class="btn btnW" onmousedown="buildWord(event)"onmousemove="buildingWord(event)" onmouseup="submitWord(event)"></div>
+					   		 	<div id="cube15" class="btn btnW" onmousedown="buildWord(event)" onmousemove="buildingWord(event)" onmouseup="submitWord(event)"></div>
+					   		 	<div id="cube16" class="btn btnW" onmousedown="buildWord(event)" onmousemove="buildingWord(event)" onmouseup="submitWord(event)"></div>
 					   		</div>
+				   		</div>
+				   		<div class="col span_1_or_4">
+				   			<h2 class="timeLeft">Time Left:</h2>
+				   			<div class="clock" style="clear:none; float:none;" id="countdownTimer">-:--</div>
+				   			<button onclick="shuffleBoggleGrid()" class="menuBtn">Shake Cubes!</button>
+				   			<button onclick="pause()" class="menuBtn">Pause Game</button>
 				   		</div>
 			   		</div>
 			  	</div>

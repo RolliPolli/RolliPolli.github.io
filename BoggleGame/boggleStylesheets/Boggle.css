@@ -1,40 +1,53 @@
-div.cube{
-/*	max-width: 160px;
-	min-width: 20px;
-	max-height: 160px;
-	min-height: 20px;*/
-	text-align: center;
-/*	min-width: 60px;
-	min-height: 50px;*/
-	line-height: 150px;
-/*	border-style: solid;
-	border-color: red;*/
-	background-color: orange;
-	/*margin: none;*/
-	display: inline-block;
+.clearfix:before, .clearfix:after { content: ""; display: table; }
+.clearfix:after { clear: both; }
+
+div.light-orange{
+	background-color: rgb(255, 173, 88);
+	padding-top: 5px;
+	padding-bottom: 10px;
 }
 
 div.text{
 	margin-left: auto;
     margin-right: auto;
     vertical-align: middle;
-
 }
 
 .wordListArea{
 	vertical-align: middle;
 	text-align:left;
-	table-layout: fixed; 
+	table-layout: auto; 
 	background-color: orange;
-	margin-left: 30%;
-	margin-right: 30%;
   	position: relative;
   	top: 0; left: 0; bottom: 0; right: 0;
-	/*border-color: orange;*/
 }
 
-h3{
+h1,h2,h3,h4{
 	text-align: center;
+	vertical-align: middle;
+	color: rgb(255,255,255);
+}
+
+h1.gamename{
+	font-size: 150px;
+	line-height: 100px;
+	margin-top: 20px;
+	margin-bottom: 55px;
+}
+
+span.letters{
+	width: 10px;
+	color: #00CEFF;
+	font-size: 50px;
+	background-color: transparent;
+	margin: auto auto;
+	height: 100%;
+}
+
+.centered{
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 table{
@@ -53,9 +66,9 @@ table{
 }
 
 .score-popup {
-    width: 50%;
-    height: 50%;
-    background: #1abcb9;
+    width: 350px;
+    height: 350px;
+    background: #00CEFF;
     position: fixed;
     z-index:1002;
     top: 0;
@@ -63,13 +76,128 @@ table{
     bottom: 0;
     left: 0;
     margin: auto;
+    border-radius: 5%;
     visibility:hidden;
 }
-
-/*
-.centered{
+.btn{
+	border: none;
+	font-family: inherit;
+	font-size: inherit;
+	color: inherit;
+	background: none;
+	cursor: pointer;
+	padding: 5px 16px;
+	display: inline-block;
+	margin: 5px 10px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-weight: 700;
+	font-size: 50px;
 	text-align: center;
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-}*/
+	vertical-align: middle;
+	line-height: 90px;
+	outline: none;
+	position: relative;
+	background: #fff;
+	color: #00CEFF;
+	box-shadow: 0 6px #0090b2;
+	-webkit-transition: none;
+	-moz-transition: none;
+	transition: none;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+.btn:after {
+	content: '';
+	position: absolute;
+	z-index: -1;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+.btn:before{
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	position: relative;
+	-webkit-font-smoothing: antialiased;
+}
+
+.btnW {
+	border-radius: 50%;
+	width: 90px;
+	height: 90px;
+	padding: 0;
+}
+
+.btnW:hover {
+	box-shadow: 0 4px #ab3c3c;
+	top: 2px;
+}
+
+.btnW:active {
+	box-shadow: 0 0 #ab3c3c;
+	top: 6px;
+}
+
+.menuBtn {
+	background-color:#00ccff;
+	-webkit-border-top-right-radius:21px;
+	-moz-border-radius-topright:21px;
+	border-top-right-radius:21px;
+	-webkit-border-bottom-left-radius:21px;
+	-moz-border-radius-bottomleft:21px;
+	border-bottom-left-radius:21px;
+	text-indent:0px;
+	border:3px solid #00ccff;
+	display:inline-block;
+	color:#ffffff;
+	font-family:Fredoka One;
+	font-size:28px;
+	font-style:normal;
+	height:80px;
+	line-height:30px;
+	width:150px;
+	text-decoration:none;
+	text-align:center;
+	clear:left;
+	float:left;
+	margin-bottom:15px;
+}.menuBtn:hover {
+	background-color:#fff;
+	color: #00ccff;
+}.menuBtn:active {
+	position:relative;
+	top:1px;
+}
+
+.popupBtn{
+	border:3px solid #fff;
+}
+
+.message{
+	font-size:36px;
+	line-height:36px;
+	color: rgb(255, 173, 88);
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+.clock{
+	margin-bottom: 30px;
+	font-size: 48px;
+	font-weight: 200;
+	margin-top: 15px; 
+	color: #fff;
+}
+
+.timeLeft{
+	vertical-align: none;
+	padding: 0 0 0 0;
+}
