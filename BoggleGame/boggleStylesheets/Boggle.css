@@ -30,6 +30,7 @@ h1,h2,h3,h4{
 
 h1.gamename{
 	font-size: 150px;
+	line-height: 100px;
 	margin-top: 20px;
 	margin-bottom: 55px;
 }
