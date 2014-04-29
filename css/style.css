@@ -24,14 +24,14 @@
 	body,input,textarea,select {
 		font-family: 'Source Sans Pro', sans-serif;
 		font-weight: 300;
-		font-size: 20pt;
+		font-size: 12pt;
 		line-height: 1.75em;
 		color: #39454b;
 		letter-spacing: 0.5px;
 	}
 
 	h1,h2,h3,h4,h5,h6 {
-		font-weight: 900;
+		font-weight: 500;
 		color: inherit;
 	}
 	
@@ -44,6 +44,11 @@
 		opacity: 1;
 		line-height: 1.6em;
 		font-size: 0.85em;
+		text-decoration: underline;
+	}
+
+	h3.subsection{
+		color: rgba(28, 187, 180, 1);
 	}
 		
 	h2 {
@@ -98,7 +103,12 @@
 		margin-bottom: 1em;
 	}
 
+	p{
+
+	}
+
 	p.read{
+		font-size: .85em;
 		line-height: 1.5em;
 	}
 
@@ -205,7 +215,7 @@
 			ul.sidebar li {
 				padding-left: 0em;
 				line-height: 1.3em;
-				font-size: 0.85em;
+				font-size: 0.8em;
 			
 		
 
@@ -270,7 +280,7 @@
 
 	/* Forms */
 
-		form {
+/*		form {
 		}
 		
 			form label {
@@ -301,9 +311,9 @@
 				-o-transition: all 0.2s ease-in-out, color 0.2s ease-in-out;
 				-ms-transition: all 0.2s ease-in-out, color 0.2s ease-in-out;
 				transition: all 0.2s ease-in-out, color 0.2s ease-in-out;
-			}
+			}*/
 
-				form input[type="text"]:hover,
+/*				form input[type="text"]:hover,
 				form input[type="password"]:hover,
 				form select:hover,
 				form textarea:hover {
@@ -348,7 +358,7 @@
 
 			form ::-moz-focus-inner {
 				border: 0;
-			}
+			}*/
 			
 	/* Tables */
 	
@@ -389,7 +399,7 @@
 	/* Buttons */
 		
 		.button {
-			background-color: #98c593;
+			background-color: rgb(28, 187, 180);
 			border: 0;
 			border-radius: 3.5em;
 			color: #fff;
@@ -442,7 +452,7 @@
 			}
 			
 			.button:hover {
-				background-color: #a8d5a3;
+				background-color: rgba(28, 187, 180, .6);;
 			}
 			
 			.button:active {
@@ -1114,8 +1124,8 @@
 		left: 0;
 		top: 0;
 		width: 100%;
-		background: #fff;
-		background: rgba(255,255,255,0.95);
+		background: url('images/overlay.png');
+		background-color: rgba(28, 187, 180, 1);
 		height: 3em;
 		line-height: 3em;
 		box-shadow: 0 0 0.15em 0 rgba(0,0,0,0.1);
@@ -1131,7 +1141,8 @@
 		top: 0;
 		height: 3em;
 		line-height: 3em;
-		letter-spacing: 0px;
+		letter-spacing: 0.65px;
+		color: #fff;
 	}
 	
 		#logo a {
@@ -1144,6 +1155,7 @@
 		top: 0;
 		height: 3em;
 		line-height: 3em;
+		color: #fff;
 	}
 
 		#nav ul {
@@ -1171,7 +1183,8 @@
 /*********************************************************************************/
 
 	#intro {
-		background: url('images/overlay.png'), url('../images/intro.jpg');
+		background: url('images/overlay.png');
+		background-color: rgba(28, 187, 180, 1);
 		background-size: 256px 256px, cover;
 		background-attachment: fixed, fixed;
 		background-position: top left, bottom center;
@@ -1290,20 +1303,21 @@
 		height: 5em;
 		line-height: 5em;
 		margin: 0;
-		background: #39454b;
-		color: #999;
-		color: rgba(185,186,187,0.5);
+		background: url('images/overlay.png');
+		background-color: rgba(28, 187, 180, 1);
+		color: #fff;
+		color: rgb(255, 255, 255);
 		overflow: hidden;
 	}
 
 		#footer a {
-			color: #999;
-			color: rgba(185,186,187,0.5);
+			color: #fff;
+			color: rgba(255,255,255,1);
 		}
 
 			#footer a:hover {
-				color: #bbb;
-				color: rgba(185,186,187,1.0);
+				/*color: #bbb;*/
+				color: rgba(0, 0, 0, 1);
 			}
 	
 		#footer .actions {
