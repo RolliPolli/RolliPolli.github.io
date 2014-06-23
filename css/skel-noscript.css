@@ -22,6 +22,8 @@
 		width: 1200px;
 		margin-left: auto;
 		margin-right: auto;
+		padding-left: 300px;
+		padding-right: 300px;
 	}
 
 	/* Modifiers */
@@ -155,6 +157,10 @@
 
 			/* Double */
 
+				.row+.row.double>*{
+					padding: 100px 0 0 100px;
+				}
+				
 				.row.double > * {
 					padding: 100px 0 0 100px;
 				}

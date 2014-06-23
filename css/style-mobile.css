@@ -52,7 +52,7 @@
 				.main.style2 .content {
 					width: 100%;
 					left: 0% !important;
-					text-align: center;
+					text-align: left;
 				}
 				
 				.main.style2 .tmp {
@@ -62,7 +62,7 @@
 				}
 
 			.main.style3 {
-				text-align: center;
+				text-align: left;
 				padding: 3em 10px 3em 10px;
 			}
 
@@ -71,7 +71,7 @@
 /*********************************************************************************/
 
 	#header {
-		height: 2.5em;
+		height: 5em;
 		line-height: 2.5em;
 	}
 
@@ -84,8 +84,8 @@
 		position: relative;
 		left: 0;
 		top: 0;
-		height: 2.5em;
-		line-height: 2.5em;
+		height: 2em;
+		line-height: 2em;
 	}
 	
 		#logo a {
@@ -93,7 +93,16 @@
 		}
 	
 	#nav {
-		display: none;
+		text-align: center;
+		position: relative;
+		left: 0;
+		top: 0;
+		height: 2em;
+		/*display: none;*/
+	}
+
+	#sticky{
+		position: initial;
 	}
 
 /*********************************************************************************/

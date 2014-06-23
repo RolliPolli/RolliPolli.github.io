@@ -1,13 +1,18 @@
 @charset 'UTF-8';
 @import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,900);
+/*@import url(http://fonts.googleapis.com/css?family=Lato:300,400);*/
 @font-face{font-family:'FontAwesome';src:url('font/fontawesome-webfont.eot?v=4.0.1');src:url('font/fontawesome-webfont.eot?#iefix&v=4.0.1') format('embedded-opentype'),url('font/fontawesome-webfont.woff?v=4.0.1') format('woff'),url('font/fontawesome-webfont.ttf?v=4.0.1') format('truetype'),url('font/fontawesome-webfont.svg?v=4.0.1#fontawesomeregular') format('svg');font-weight:normal;font-style:normal}
 
 /*********************************************************************************/
 /* Basic                                                                         */
 /*********************************************************************************/
 
+	html{
+		height: 100%;
+	}
 	body {
 		background: #fff;
+		height:100%;
 	}
 
 		body.loading {
@@ -31,14 +36,22 @@
 	}
 
 	h1,h2,h3,h4,h5,h6 {
-		font-weight: 500;
+		font-weight: 300;
 		color: inherit;
 	}
 	
 		h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
 			color: inherit;
 			text-decoration: none;
+			/*letter-spacing: 1px;*/
 		}
+
+	h3{font-size:1.2em;
+		line-height: 1.5em;}
+
+	h3.skillTitles{
+		font-weight: 400;
+	}
 
 	h3.sideHeading{
 		opacity: 1;
@@ -52,13 +65,13 @@
 	}
 		
 	h2 {
-		font-size: 2.25em;
-		letter-spacing: -2px;
+		font-size: 2em;
+		letter-spacing: -1px;
 		line-height: 1.25em;
 	}
 		
 	strong, b {
-		font-weight: 900;
+		font-weight: 700;
 		color: inherit;
 	}
 	
@@ -103,13 +116,28 @@
 		margin-bottom: 1em;
 	}
 
-	p{
+	ul.processlist > li{
+		margin-bottom: 0em;
+		list-style-type: decimal;
+		font-size: .85em;
+		line-height: 1.5em;
+		padding-top: 0.5em;
+		padding-bottom: 0.2em;
+	}
 
+	p{
+		font-size: .8em;
+		line-height: 1.3em;
 	}
 
 	p.read{
 		font-size: .85em;
 		line-height: 1.5em;
+		padding-top: 0.5em;
+	}
+
+	p.extraTopSpace{
+		padding-top: 1em;
 	}
 
 	header {
@@ -494,7 +522,7 @@
 		}
 		
 			.main.style1 {
-				text-align: center;
+				text-align: left;
 				padding: 10em 0 10em 0;
 			}
 			
@@ -628,8 +656,8 @@
 						}
 		
 			.main.style3 {
-				text-align: center;
-				padding: 6em 0 6em 0;
+				text-align: left;
+				padding: 2.8em 3em 2em 3em;
 			}
 
 				.main.style3 .content {
@@ -1124,7 +1152,7 @@
 		left: 0;
 		top: 0;
 		width: 100%;
-		background: url('images/overlay.png');
+		/*background: url('images/overlay.png');*/
 		background-color: rgba(28, 187, 180, 1);
 		height: 3em;
 		line-height: 3em;
@@ -1148,7 +1176,11 @@
 		#logo a {
 			font-size: 1.25em;
 		}
-	
+
+		#logo:hover{
+			color: rgba(0, 0, 0, 1);
+		}
+
 	#nav {
 		position: absolute;
 		right: 0.5em;
@@ -1164,8 +1196,8 @@
 
 			#nav ul li {
 				display: inline-block;
-				margin-left: 0.5em;
-				font-size: 0.9em;
+				margin-left: 1.2em;
+				font-size: 1em;
 			}
 			
 				#nav ul li a {
@@ -1178,6 +1210,40 @@
 					outline: 0;
 				}
 
+				#nav ul li a:hover{
+					color: rgba(0, 0, 0, 1);
+				}
+
+	.wrapper 
+	{
+    	min-height: 100%;
+	    height: auto !important;
+	    height: 100%;
+	    margin: 0 auto -5em; /* the bottom margin is the negative value of the footer's height */
+	}
+
+	.push
+	{
+		height: 5em;
+	}
+
+	#sticky
+	{
+		position: fixed;
+	}
+
+	#empty
+	{
+		min-height: 1px !important;
+	}
+
+	.chance_video{
+	max-width: 100%;
+	min-width:200px;
+	height: 400px;
+	min-height: 280px;
+	margin-right: 50px;
+	}
 /*********************************************************************************/
 /* Intro                                                                         */
 /*********************************************************************************/
@@ -1196,7 +1262,7 @@
 	}
 
 /*********************************************************************************/
-/* One     url('images/overlay.png'),                                                                        */
+/* One     url('images/overlay.png'),                                            */
 /*********************************************************************************/
 
 	#one {
@@ -1265,7 +1331,7 @@
 /* Contact                                                                       */
 /*********************************************************************************/
 
-	#contact {
+/*	#contact {
 		padding-bottom: 0;
 		overflow: hidden;
 	}
@@ -1292,14 +1358,14 @@
 
 			#contact.inactive .box {
 				bottom: -30em;
-			}
+			}*/
 
 /*********************************************************************************/
 /* Footer                                                                        */
 /*********************************************************************************/
 	
 	#footer {
-		position: relative;
+		position:relative;
 		height: 5em;
 		line-height: 5em;
 		margin: 0;
