@@ -65,6 +65,10 @@
 				text-align: left;
 				padding: 3em 10px 3em 10px;
 			}
+.button{
+	height: 3em;
+	line-height: 3em;
+}
 
 /*********************************************************************************/
 /* Header                                                                        */

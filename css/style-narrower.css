@@ -35,6 +35,10 @@
 						.main.style2.inactive.left .content {
 							left: -60%;
 						}
+		.button{
+			height:3.3em;
+			line-height: 1.6em;
+		}
 
 /*********************************************************************************/
 /* Footer                                                                        */
