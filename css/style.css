@@ -45,6 +45,10 @@
 			text-decoration: none;
 			/*letter-spacing: 1px;*/
 		}
+	.underline{
+		color: #98c593;
+		text-decoration: underline;
+	}
 
 	h3{font-size:1.2em;
 		line-height: 1.5em;}
