@@ -75,7 +75,8 @@
 	}
 		
 	strong, b {
-		font-weight: 700;
+		font-weight: 500;
+		font-size: 1.3em;
 		color: inherit;
 	}
 	
@@ -132,6 +133,10 @@
 	p{
 		font-size: .8em;
 		line-height: 1.3em;
+	}
+
+	p.no-padding{
+		padding: 0px;
 	}
 
 	p.read{
