@@ -81,7 +81,7 @@
 		}
 
 		.row {
-			margin-left: -50px;
+			margin-left: 0;
 		}
 
 	/* Rows */
@@ -105,12 +105,14 @@
 
 			/* Flush */
 
-				.row.flush {
+				.row.flushed {
 					margin-left: 0;
+					padding-left: 0 !important;
 				}
 
-				.row.flush > * {
-					padding: 0 !important;
+				.row.flushed > * {
+					margin-left: 0;
+					padding-left: 0 !important;
 				}
 
 			/* Quarter */

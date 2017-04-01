@@ -48,17 +48,10 @@
 		height: auto;
 		line-height: inherit;
 		text-align: center;
-		padding: 2em 1em 2em 1em;
+		/*padding: 2em 1em 2em 1em;*/
+		margin-top: 0px;
 	}
 
-		#footer .actions {
-			position: relative;
-			left: 0;
-			top: 0;
-			height: auto;
-			line-height: inherit;
-			margin: 0 0 1em 0;
-		}
 		
 		#footer .menu {
 			position: relative;
