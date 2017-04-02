@@ -7,7 +7,7 @@
 	}
 
 	body,input,textarea,select {
-		font-size: 12pt;
+		font-size: 14pt;
 		line-height: 1.5em;
 	}
 
@@ -75,8 +75,8 @@
 /*********************************************************************************/
 
 	#header {
-		height: 5em;
-		line-height: 2.5em;
+		height: 4em;
+		line-height: 2em;
 	}
 
 	body {
@@ -133,3 +133,7 @@
 				#footer .menu li a {
 					line-height: 1.5em;
 				}
+
+	#contact {
+		padding-top:0em; 
+	}

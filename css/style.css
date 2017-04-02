@@ -19,13 +19,13 @@
 		body.loading {
 		}
 		
-			body.loading * {
-				-moz-transition: none !important;
-				-webkit-transition: none !important;
-				-o-transition: none !important;
-				-ms-transition: none !important;
-				transition: none !important;
-			}
+		body.loading * {
+			-moz-transition: none !important;
+			-webkit-transition: none !important;
+			-o-transition: none !important;
+			-ms-transition: none !important;
+			transition: none !important;
+		}
 
 	body,input,textarea,select {
 		font-family: 'Montserrat-ExtraLight', sans-serif;
@@ -107,7 +107,6 @@
 	}
 
 	a {
-		/*color: #98c593;*/
 		color: rgba(28, 187, 180, 1);
 		-moz-transition: all 0.2s ease-in-out, color 0.2s ease-in-out;
 		-webkit-transition: all 0.2s ease-in-out, color 0.2s ease-in-out;
@@ -215,6 +214,16 @@
 
 	header {
 		/*margin-bottom: 1em;*/
+    	transition: top 0.2s ease-in-out;
+    	position: fixed;
+		z-index: 10000;
+		left: 0;
+		top: 0;
+		width: 100%;
+		background-color: rgba(28, 187, 180, 1);
+		height: 2em;
+		line-height: 2em;
+		box-shadow: 0 0 0.15em 0 rgba(0,0,0,0.1);
 	}
 	
 		header p {
@@ -312,11 +321,6 @@
 				float: left;/*display: block;*/
 				margin: 0 0 0 0;
 			}
-
-				/*.image.centered img {
-					margin: 0 auto;
-					width: auto;
-				}*/
 
 	/* Lists */
 
@@ -541,6 +545,7 @@
 		}
 
 			.button.down {
+				background-color: rgba(28, 187, 180, 0);
 				width: 5em;
 				height: 5em;
 				line-height: 4.5em;
@@ -606,6 +611,8 @@
 
 			.Summarybox {
   				padding: 1em .25em .25em .25em !important;
+  				margin-top: 1em;
+  				margin-bottom: 2em; 
   				align-content: center;
   				height: auto;
   				overflow: auto;
@@ -1253,7 +1260,7 @@
 /*********************************************************************************/
 
 	#header {
-		position: fixed;
+		/*position: fixed;
 		z-index: 10000;
 		left: 0;
 		top: 0;
@@ -1261,11 +1268,24 @@
 		background-color: rgba(28, 187, 180, 1);
 		height: 2em;
 		line-height: 2em;
-		box-shadow: 0 0 0.15em 0 rgba(0,0,0,0.1);
+		box-shadow: 0 0 0.15em 0 rgba(0,0,0,0.1);*/
 	}
+
+	/*header {
+    background: #f5b335;
+    height: 40px;
+    position: fixed;
+    top: 0;
+    transition: top 0.2s ease-in-out;
+    width: 100%;
+}*/
+
+.nav-up {
+    top: -2em;
+}
 	
 	body {
-		padding-top: 1em;
+		padding-top: 2em;
 	}
 
 	#logo {
