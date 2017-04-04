@@ -99,7 +99,7 @@
 		font-weight: 700;
 		font-size: inherit;
 		/*font-size: 1.3em;*/
-		color: inherit;
+		color: rgba(28, 187, 180, 1);
 	}
 	
 	em, i {
@@ -321,6 +321,10 @@
 				float: left;/*display: block;*/
 				margin: 0 0 0 0;
 			}
+
+		.shadow {
+			box-shadow: 1px 1px 20px #f1f1f1;
+		}
 
 	/* Lists */
 
